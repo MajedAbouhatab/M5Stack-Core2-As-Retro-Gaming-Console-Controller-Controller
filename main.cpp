@@ -126,7 +126,7 @@ void SpeedDial(void)
 
 void GetGame(int A)
 {
-    int D;
+    int D = 0;
     char buffer[10];
     A--;
     if (A >= 40)
@@ -183,7 +183,6 @@ void ScreenEvent(Event &e)
 
 void setup(void)
 {
-    Serial.begin(115200);
     WiFi.begin("ESP8266-Access-Point", "ESP8266-Access-Point");
     M5.begin(true, false, false, false);
     M5.Axp.SetLed(0);
